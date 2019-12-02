@@ -23,5 +23,8 @@ linesInSource.forEach(line => {
   const newFilePath = path.join(__dirname, target, filename);
 
   // write the file and it's contents
-  fs.writeFileSync(newFilePath, contentArr, { flag: 'w+', encoding: 'utf-8' });
+  fs.writeFileSync(newFilePath, contentArr.join(' '), {
+    flag: 'w+',
+    encoding: 'utf-8'
+  });
 });
